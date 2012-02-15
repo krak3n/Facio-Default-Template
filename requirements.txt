@@ -1,0 +1,4 @@
+## Place your pip requirements here or use pip freeze:
+django==1.3
+ipython
+ipdb
