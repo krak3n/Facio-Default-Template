@@ -6,9 +6,7 @@ common.py
 Common {{PROJECT_NAME}} settings that apply to all environments.
 """
 
-
 from os.path import abspath, join, dirname
-
 
 """ Paths """
 # Root of the site (not project)
@@ -23,7 +21,6 @@ STATICFILES_DIRS = [
 # Log files
 LOG_ROOT = join(SITE_ROOT, 'logs')
 
-
 """ Urls """
 # Static Media URL
 STATIC_URL = '/s/'
@@ -34,18 +31,15 @@ ADMIN_MEDIA_PREFIX = '/s/admin/'
 # Root URL config
 ROOT_URLCONF = '{{PROJECT_NAME}}.urls'
 
-
 """ Secret Key & Site ID """
 SITE_ID = 1
 SECRET_KEY = '{{DJANGO_SECRET_KEY}}'
-
 
 """ Location """
 TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-gb'
 USE_I18N = True
 USE_L10N = True
-
 
 """ Templates """
 TEMPLATE_DIRS = [join(PROJECT_ROOT, 'templates')]
@@ -65,8 +59,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     '{{PROJECT_NAME}}.context_processors.domain',
 )
 
-
-""" Middleware (django cache middleware is here by default, remove if not needed) """
+""" Middleware """
 MIDDLEWARE_CLASSES = (
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,8 +70,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
-
-""" Installed Applications (by default, django admin is installed, remove if not needed) """
+""" Installed Applications """
 INSTALLED_APPS = (
     # Django Apps
     'django.contrib.auth',
@@ -91,5 +83,3 @@ INSTALLED_APPS = (
     # Third Party Apps here
     # Project Apps here
 )
-
-""" Add any other extra common settings you require below """
