@@ -3,19 +3,15 @@
 """
 settings.py
 
-Settings for live environment for {{PROJECT_NAME}}.
+Local settings for {{ PROJECT_NAME }}.
 """
 
 
 from {{PROJECT_NAME}}.config.common import *
 
 
-""" STATIC_ROOT as of django 1.3 """
-STATIC_ROOT = join(PROJECT_ROOT, 'static')
-
-
-""" Debugging (default False for live environment) """
-DEBUG = False
+""" Debugging (default True for local environment) """
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 
@@ -23,9 +19,9 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_name',
-        'USER': 'db_user',
-        'PASSWORD': 'db_pass',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
